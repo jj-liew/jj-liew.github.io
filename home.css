@@ -42,15 +42,18 @@ h1 {
 }
 
 img {
+	opacity: 0;
 	animation-name: fadein;
-	animation-duration: 2s;
+	animation-duration: 2.5s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
 }
 
 .cover {
 	opacity: 0;
 	animation-name: fadein;
-	animation-duration: 2s;
-	animation-delay: 1s;
+	animation-duration: 2.5s;
+	animation-delay: 1.5s;
 	animation-fill-mode: forwards;
 }
 
