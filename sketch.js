@@ -41,7 +41,7 @@ function draw() {
   
   flicker();
 
-  console.log(connect, canConnect);
+  //console.log(connect, canConnect);
 }
 
 function randomizeX(){
