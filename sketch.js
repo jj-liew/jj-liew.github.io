@@ -24,8 +24,8 @@ function setup() {
     randys[i] = -10;
    }
   
-  setInterval(randomizeX, 2500);
-  setInterval(randomizeY, 2500);
+  setInterval(randomizeX, 9000);
+  setInterval(randomizeY, 9000);
 }
 
 function draw() {
@@ -91,7 +91,7 @@ function mouseMoved() {
 
 function flicker() {
 
-  if (opa >= 252) {
+  if (opa >= 255) {
     flick = false;
   }
   if (opa == 0) {
@@ -99,9 +99,9 @@ function flicker() {
   }
   
   if (flick == true) {
-    opa+=3.5;
+    opa+=1;
   } else if (flick == false) {
-    opa-=3.5;
+    opa-=1;
   }
 }
 
