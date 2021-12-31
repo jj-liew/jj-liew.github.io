@@ -1,5 +1,5 @@
 html {
-	overflow: hidden;
+	overflow: visible;
 }
 
 body {
@@ -119,12 +119,45 @@ a {
 .dragon model-viewer{
 	opacity: 0;
   height: 370px;
-  width: 370px;
+  width: 315px;
+  max-width: 90%;
+  max-height: 90%;
   margin: auto; 
+  margin-top: 1em;
   animation-name: fadein;
 	animation-duration: 2.5s;
 	animation-delay: 5s;
 	animation-fill-mode: forwards;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px white;
+}
+
+.discover {
+	margin-top: 2.5em;
+	text-align: center;
+}
+
+a.button {
+	border: 1px solid white;
+	background: -webkit-linear-gradient(0deg, transparent 50%, white 50%);
+	background-size: 650px;
+	font-size: 20px;
+	font-weight: 600;
+	padding: 0.5em 5.5em;
+	-webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+	animation-name: fadein;
+	animation-duration: 2.5s;
+	animation-delay: 5.5s;
+	animation-fill-mode: forwards;
+}
+
+a.button:hover {
+	color: black;
+	text-decoration: none;
+	background-position: 325px 0;
 }
 
 /**footer {
