@@ -1,5 +1,5 @@
 html {
-	overflow: visible;
+	overflow: hidden;
 }
 
 body {
@@ -118,6 +118,7 @@ a {
 
 .dragon model-viewer{
 	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.3);
   height: 370px;
   width: 315px;
   max-width: 90%;
@@ -138,12 +139,11 @@ a {
 }
 
 a.button {
-	border: 1px solid white;
 	background: -webkit-linear-gradient(0deg, transparent 50%, white 50%);
 	background-size: 650px;
 	font-size: 20px;
 	font-weight: 600;
-	padding: 0.5em 5.5em;
+	padding: 0.5em 4.5em;
 	-webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
