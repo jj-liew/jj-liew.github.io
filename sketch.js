@@ -24,8 +24,8 @@ function setup() {
     randys[i] = -10;
    }
   
-  setInterval(randomizeX, 9000);
-  setInterval(randomizeY, 9000);
+  setInterval(randomizeX, 8500);
+  setInterval(randomizeY, 8500);
 }
 
 function draw() {

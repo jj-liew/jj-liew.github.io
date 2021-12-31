@@ -69,8 +69,8 @@ h1 {
 	top: 0;
   left: 0;
   width:  100%;
-  padding-top: 1.5em;
-  padding-bottom: 0.5em;
+  padding-top: 2.0em;
+  padding-bottom: 1em;
  	-webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   z-index: 1;
@@ -110,6 +110,7 @@ a {
 	0%   {transform: rotateY(0deg);}
   100% {transform: rotateY(360deg);}
 }
+
 
 /**footer {
 	margin-left: auto;
