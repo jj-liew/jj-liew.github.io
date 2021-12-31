@@ -1,5 +1,5 @@
 html {
-	overflow: hidden;
+	overflow: visible;
 }
 
 body {
@@ -25,12 +25,17 @@ p {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: -3em;
+	opacity: 0;
+	animation-name: fadein;
+	animation-duration: 3s;
+	animation-delay: 4.5s;
+	animation-fill-mode: forwards;
 }
 
 h1, p, footer {
 	font-family: Helvetica, serif;
 	color: white;
-	opacity: 0.87;
 }
 
 h1 {
@@ -40,19 +45,19 @@ h1 {
 	margin-top: 6.5em;
 	font-size: 25px;
 	font-weight: 600;
-	letter-spacing: 1em;
-	text-indent: 1em;
+	letter-spacing: 0.95em;
+	text-indent: 0.95em;
 	transform: translate(0px, 200px);
 }
 
 @keyframes fadein {
   0%   {opacity: 0;}
-  100%  {opacity: 1;}
+  100%  {opacity: 0.87;}
 }
 
 @keyframes moveup {
 	0% {transform: translate(0px, 0px);}
-  100% {transform: translate(0px, -200px);}
+  100% {transform: translate(0px, -250px);}
 }
 
 .coverImg {
@@ -120,7 +125,7 @@ a {
   margin: auto; 
   animation-name: fadein;
 	animation-duration: 2.5s;
-	animation-delay: 6s;
+	animation-delay: 5s;
 	animation-fill-mode: forwards;
 }
 
