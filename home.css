@@ -1,5 +1,5 @@
 html {
-	overflow: visible;
+	overflow: hidden;
 }
 
 body {
@@ -25,7 +25,6 @@ p {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -3em;
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 3s;
@@ -42,12 +41,11 @@ h1 {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 6.5em;
-	font-size: 25px;
+	margin-top: 4.7em;
+	margin-bottom: -3.5em;
+	font-size: 53px;
 	font-weight: 600;
-	letter-spacing: 0.95em;
-	text-indent: 0.95em;
-	transform: translate(0px, 200px);
+	transform: translate(0px, 65px);
 }
 
 @keyframes fadein {
