@@ -1,5 +1,5 @@
 html {
-	overflow: hidden;
+	overflow: visible;
 }
 
 body {
@@ -28,7 +28,7 @@ p {
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 3s;
-	animation-delay: 4.5s;
+	animation-delay: 3.5s;
 	animation-fill-mode: forwards;
 }
 
@@ -42,8 +42,8 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 4.7em;
-	margin-bottom: -3.5em;
-	font-size: 53px;
+	margin-bottom: -3.6em;
+	font-size: 52px;
 	font-weight: 600;
 	transform: translate(0px, 65px);
 }
@@ -69,8 +69,8 @@ h1 {
 .cover {
 	opacity: 0;
 	animation-name: fadein, moveup;
-	animation-duration: 3s, 1.5s;
-	animation-delay: 1.5s, 3s;
+	animation-duration: 1.5s, 1.5s;
+	animation-delay: 1s, 2s;
 	animation-fill-mode: forwards;
 }
 
@@ -118,7 +118,6 @@ a {
 
 .dragon model-viewer{
 	opacity: 0;
-	background-color: rgba(255, 255, 255, 0.3);
   height: 370px;
   width: 315px;
   max-width: 90%;
@@ -127,37 +126,38 @@ a {
   margin-top: 1em;
   animation-name: fadein;
 	animation-duration: 2.5s;
-	animation-delay: 5s;
-	animation-fill-mode: forwards;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px white;
+	animation-delay: 4.5s;
+	animation-fill-mode: forwards;	
 }
 
-.discover {
-	margin-top: 2.5em;
+.about {
+	margin-top: 1.2em;
+	margin-bottom: 2em;
 	text-align: center;
 }
 
 a.button {
-	background: -webkit-linear-gradient(0deg, transparent 50%, white 50%);
-	background-size: 650px;
+	border: 1px solid white;
+	background: -webkit-linear-gradient(transparent 50%, white 50%);
+	background-size: 700px 650px;
 	font-size: 20px;
 	font-weight: 600;
-	padding: 0.5em 4.5em;
+	padding: 0.5em 5em;
 	-webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
   opacity: 0;
 	animation-name: fadein;
 	animation-duration: 2.5s;
-	animation-delay: 5.5s;
+	animation-delay: 4s;
 	animation-fill-mode: forwards;
 }
 
 a.button:hover {
 	color: black;
 	text-decoration: none;
-	background-position: 325px 0;
+	box-shadow: 0px 0px 5px white;
+	background-position: 0 50px;
 }
 
 /**footer {
