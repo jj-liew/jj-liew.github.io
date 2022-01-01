@@ -28,7 +28,7 @@ p {
 	opacity: 0;
 	animation-name: fadein;
 	animation-duration: 3s;
-	animation-delay: 3.5s;
+	animation-delay: 3s;
 	animation-fill-mode: forwards;
 }
 
@@ -69,7 +69,7 @@ h1 {
 .cover {
 	opacity: 0;
 	animation-name: fadein, moveup;
-	animation-duration: 1.5s, 1.5s;
+	animation-duration: 1.5s, 1s;
 	animation-delay: 1s, 2s;
 	animation-fill-mode: forwards;
 }
@@ -126,7 +126,7 @@ a {
   margin-top: 1em;
   animation-name: fadein;
 	animation-duration: 2.5s;
-	animation-delay: 4.5s;
+	animation-delay: 4s;
 	animation-fill-mode: forwards;	
 }
 
@@ -149,7 +149,7 @@ a.button {
   opacity: 0;
 	animation-name: fadein;
 	animation-duration: 2.5s;
-	animation-delay: 4s;
+	animation-delay: 3.5s;
 	animation-fill-mode: forwards;
 }
 
