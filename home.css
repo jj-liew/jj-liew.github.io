@@ -30,6 +30,7 @@ p {
 	animation-duration: 3s;
 	animation-delay: 3s;
 	animation-fill-mode: forwards;
+	transform: translate(0px, 395px);
 }
 
 h1, p, footer {
@@ -45,7 +46,7 @@ h1 {
 	margin-bottom: -3.6em;
 	font-size: 52px;
 	font-weight: 600;
-	transform: translate(0px, 65px);
+	transform: translate(0px, 210px);
 }
 
 @keyframes fadein {
@@ -66,12 +67,12 @@ h1 {
 	animation-fill-mode: forwards;
 }
 
-.cover {
+/**.cover {
 	opacity: 0;
 	animation-name: fadein, moveup;
 	animation-duration: 1.5s, 1s;
 	animation-delay: 1s, 2s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards;**/
 }
 
 .nav {
@@ -127,13 +128,15 @@ a {
   animation-name: fadein;
 	animation-duration: 2.5s;
 	animation-delay: 4s;
-	animation-fill-mode: forwards;	
+	animation-fill-mode: forwards;
+	transform: translate(0px, -150px);
 }
 
 .about {
 	margin-top: 1.2em;
 	margin-bottom: 2em;
 	text-align: center;
+	transform: translate(0px, 395px);
 }
 
 a.button {

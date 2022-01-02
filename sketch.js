@@ -2,7 +2,7 @@ var canvas;
 let stars = [];
 let connect = 0;
 let canConnect = true;
-let n = 30;
+let n = 40;
 let randx = 0;
 let randy = 0;
 let randxs = [];
