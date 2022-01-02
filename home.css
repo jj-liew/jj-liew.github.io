@@ -46,7 +46,7 @@ h1 {
 	margin-bottom: -3.6em;
 	font-size: 52px;
 	font-weight: 600;
-	transform: translate(0px, 210px);
+	transform: translate(0px, 50px);
 }
 
 @keyframes fadein {
@@ -54,9 +54,9 @@ h1 {
   100%  {opacity: 0.87;}
 }
 
-@keyframes moveup {
+@keyframes movedown {
 	0% {transform: translate(0px, 0px);}
-  100% {transform: translate(0px, -250px);}
+  100% {transform: translate(0px, 160px);}
 }
 
 .coverImg {
@@ -67,12 +67,12 @@ h1 {
 	animation-fill-mode: forwards;
 }
 
-/**.cover {
+.cover {
 	opacity: 0;
-	animation-name: fadein, moveup;
+	animation-name: fadein, movedown;
 	animation-duration: 1.5s, 1s;
 	animation-delay: 1s, 2s;
-	animation-fill-mode: forwards;**/
+	animation-fill-mode: forwards;
 }
 
 .nav {
@@ -141,11 +141,12 @@ a {
 
 a.button {
 	border: 1px solid white;
+	border-radius: 5px;
 	background: -webkit-linear-gradient(transparent 50%, white 50%);
 	background-size: 700px 650px;
 	font-size: 20px;
 	font-weight: 600;
-	padding: 0.5em 5em;
+	padding: 0.5em 4.9em;
 	-webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
@@ -156,11 +157,28 @@ a.button {
 	animation-fill-mode: forwards;
 }
 
+a.button:after {
+	color: black;
+  content: '﹀';
+  position: absolute;
+  opacity: 0;  
+  top: 30px;
+  left: 49.35%;
+  transition: 0.4s;
+}
+
 a.button:hover {
 	color: black;
 	text-decoration: none;
+  padding-bottom: 18px;
 	box-shadow: 0px 0px 5px white;
-	background-position: 0 50px;
+	background-position: 0 55px;
+}
+
+a.button:hover:after {
+	color: black;
+  opacity: 1;
+  top: 18px;
 }
 
 /**footer {
