@@ -74,6 +74,7 @@ function drawCircle() {
     if (d < 3*50 && canConnect == true) {
       stroke(starColor);
       line(randxs[i], randys[i], mouseX, mouseY);
+      circle(mouseX, mouseY, 3);
       connect +=1;
     }
     if (connect >= 5) {
@@ -91,7 +92,7 @@ function mouseMoved() {
 
 function flicker() {
 
-  if (opa >= 255) {
+  if (opa >= 100) {
     flick = false;
   }
   if (opa == 0) {
@@ -99,9 +100,9 @@ function flicker() {
   }
   
   if (flick == true) {
-    opa+=1;
+    opa+=0.4;
   } else if (flick == false) {
-    opa-=1;
+    opa-=0.4;
   }
 }
 
