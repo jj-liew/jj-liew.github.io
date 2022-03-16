@@ -6,23 +6,78 @@
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="animate.js"></script>
+    <script src="scroll.js"></script>
+    <title>JJLIEW | ABOUT</title>
 </head>
 
 <body>
     <div class="nav">
-            <ul>
+        <ul>
             <li>
-                <a id="pageActive" href="#">HOME</a>
+                <a href="index.html">HOME</a>
             </li>
             <li>
-                <a href="#">ABOUT ME</a>
+                <a id="pageActive" href=" ">ABOUT</a>
             </li>
             <li>
-                <a href="#">WORKS</a>
+                <div class="dropdown">
+                    <a href="works.html">WORK▼</i></a>
+                    <div class="dropdown-content">
+                        <a href="game.html">Intro To Game Design</a>
+                        <a href="interactive.html">Interactive 3D Graphics</a>
+                        <a href="type.html">Typography</a>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
-    <h1>ABOUT</h1>
-    <p></p>
+    <div id="about" class = "transition transition-1 is-active">
+        <h1>SOM<span id ="red">E</span>THING
+            <br>
+            &nbsp;&nbsp; AB<span id ="red">O</span>UT <span id ="yellow">ME</span> &nbsp;&nbsp;...
+        </h1>
+        <div id="content">
+            <div id="contact">
+                <div id="pic">
+                </div>
+                <a href="Resume.pdf" alt="Kevin's resume" target="_blank" rel="noopener noreferrer"><button id="resume">View Resume</button></a>
+                <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+                <a href="https://github.com/jj-liew" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
+                <a href="mailto:kl1369@messiah.edu" class="fa fa-envelope"></a>
+            </div>
+            <p>Hi! My name is</p>
+            <span id="name">Kevin Liew.</span>
+            <br>
+            <p>I'm a junior Digital Media major from Malaysia, currently studying at Messiah University in Pennsylvania, 
+            with a concentration in Mobile Application and Game Design.
+            <br><br>
+            I'm most interested in front-end design for web and mobile apps, but also enjoy back-end development, especially for games.
+            <br><br>
+            <span id="skills">
+                <span id="tech">TECHNICAL SKILLS</span>
+            <br><br>
+            <span id="skillList">
+                Web Dev: HTML, CSS, JavaScript, PHP & SQL <br>
+                Programming: Python, C++, Java <br>
+                Mobile Dev: React Native, Expo CLI <br>
+                Design: Typography, Interactive Design (UI/UX)
+                
+                </span>
+            </span>
+            <br>
+            I'm looking for an opportunity that will let me demonstrate and sharpen my programming and designing skills and gain more experience
+            in web and game development.
+            <br><br>        
+            </p>  
+        </div> 
+        <div class="buttons">
+        <a id="works" href="works.html" alt="Go to works page">See Works</a> 
+        </div>
+    </div>
 </body>
+</html>

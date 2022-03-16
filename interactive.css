@@ -1,0 +1,255 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: #181818;
+    transition: 1s background-color;
+}
+
+body.changeColor {
+    background-color: #2c253b;
+}
+
+body.changeColor2 {
+    background-color: #473037;
+}
+
+.nav {
+    position: fixed;
+	top: 0;
+    left: 0;
+    width:  100%;
+    padding-top: 2.0em;
+    padding-bottom: 1em;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width:  20.1em;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+li {
+    display: inline-block;
+    padding-left: 1.2em;
+    padding-right: 1.2em;       
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: -3em;
+    background-color: #5596BA;
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgba(255, 255, 255, 0.83) ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    color: #181818;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.dropdown:active {
+    transform: translateY(-2px);
+}
+
+.dropdown a:active {
+    transform: translateY(2px);
+    transition: transform 0s;
+}
+
+a, h1, p{
+    color: rgba(255, 255, 255, 0.83);
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5596BA;
+}
+
+#pageActive {
+	color: #5596BA;
+	font-weight: 600;
+    border-radius: 5px;
+}
+
+#pageActive:hover {
+    text-decoration: none;
+}
+
+li:active, #back:active {
+    transform: translateY(2px);
+    border: none;
+    outline: none;
+    transition: transform 0s;
+}
+
+#content {
+    margin: auto;
+    width: 60em;
+}
+
+#project {
+    float: right;
+    margin-top: -18.5em;
+    margin-right: 5em;
+    margin-bottom: 5em;
+    padding-bottom: 1em;
+    width: 27.6em;
+    background-color: #252525;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 3px;
+}
+
+.card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: none;
+}
+
+.card-body {
+    margin: auto;
+    width: 25em;
+    border-radius: 0px;
+}
+
+.card-text {
+    margin-left: -1.2em;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 4em;
+    margin-left: 3em;
+    padding: 0.3em;
+    width: 11em;
+    font-weight: bold;
+    text-align: left;
+    color: #BA785F;
+}
+
+#description {
+    margin: auto;
+    margin-left: 5.5em;
+    padding: 1.5em;
+    padding-left: 3em;
+    padding-right: 12em;
+    width: 30em;
+    text-align: left;
+    background-color: #BA785F;
+    border-radius: 3px;
+}
+
+#subtitle {
+    font-weight: bold;
+    margin-left: -1.3em;
+}
+
+video {
+    margin-left: -1.3em;
+    margin-bottom: 1em;
+    width: 25em;
+    border-radius: 3px;
+}
+
+#back {
+    position: fixed;
+    display: block;
+    background-color: transparent;
+    color: #BA785F;
+    border: 1px solid #BA785F;
+    border-radius: 5px;
+    bottom: 3em;
+    left: 3em;
+    width: 150px;
+    text-align: center;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    background: -webkit-linear-gradient(0deg, transparent 50%, #BA785F 50%);
+    background-size: 300px 80px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#back::before {
+	color: rgba(255, 255, 255, 0.83);
+	content: '< ';
+	opacity: 0;
+    margin-left: -15px;
+	transition: all 0.1s;
+}
+
+#back:hover, #back:focus {
+	color: rgba(255, 255, 255, 0.83);
+	text-decoration: none;
+    padding-right: 3px;
+	background-position: 150px 0px;
+    outline:none;
+    cursor: pointer;
+}    
+
+#back:hover::before, #back:focus::before {
+	color: rgba(255, 255, 255, 0.83);
+  	opacity: 1;
+  	margin-left: -10px;
+}
+
+footer {
+    margin: auto;
+    margin-top: 14.5em;
+    width: 10em;
+}
+
+.fa {
+    font-size: 20px;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.3em;
+    border-radius: 5px;
+}
+
+.fa-linkedin, .fa-linkedin:hover{
+    background: transparent;
+    color: #007bb5;
+}
+
+.fa-github, .fa-github:hover {
+    background: transparent;
+    color: #8730a3;
+}
+
+.fa-envelope, .fa-envelope:hover {
+    background: transparent;
+    color: #BA785F;
+}

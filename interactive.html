@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="interactive.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="scroll.js"></script>
+    <script src="animate.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+               <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a id="pageActive" href="works.html">WORK▼</i></a>
+                    <div class="dropdown-content">
+                        <a href="game.html">Intro To Game Design</a>
+                        <a href="interactive.html">Interactive 3D Graphics</a>
+                        <a href="type.html">Typography</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="content" class = "transition transition-1 is-active">
+        <h1>INTERACTIVE
+            <br>
+            3D GRAPHICS
+        </h1>
+        <p id="description">
+            Created graphics using WebGL, a JavaScript API for rendering graphics. Transformations are applied using matrices.
+        </p>
+        <div id="project">
+            <div id ="tictactoe" class="card">
+                <div class="card-body">
+                    <p id="subtitle">Rubik's Cube</p>
+                    <video loop autoplay muted>
+                        <source src="rubik.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+            </div>
+        </div>
+    
+    <footer>
+        <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+        <a href="https://github.com/jj-liew" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
+        <a href="mailto:kl1369@messiah.edu" class="fa fa-envelope"></a>
+    </footer>
+    <div class="buttons">
+    <a id="back" href="works.html" alt="Go to work page">Back</a>
+    </div>
+</div>
+</body>
+</html>

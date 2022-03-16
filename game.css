@@ -1,0 +1,361 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: #181818;
+    transition: 1s background-color;
+}
+
+body.changeColor {
+    background-color: #2c253b;
+}
+
+body.changeColor2 {
+    background-color: #473037;
+}
+
+.preload {
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+	top: 0;
+    left: 0;
+    width:  100%;
+    padding-top: 2.0em;
+    padding-bottom: 1em;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width:  20.1em;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+li {
+    display: inline-block;
+    padding-left: 1.2em;
+    padding-right: 1.2em;       
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-left: -3em;
+    background-color: #5596BA;
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgba(255, 255, 255, 0.83) ;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    color: #181818;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.dropdown:active {
+    transform: translateY(-2px);
+}
+
+.dropdown a:active {
+    transform: translateY(2px);
+    transition: transform 0s;
+}
+
+a, h1, p{
+    color: rgba(255, 255, 255, 0.83);
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5596BA;
+}
+
+#pageActive {
+	color: #5596BA;
+	font-weight: 600;
+    border-radius: 5px;
+}
+
+#pageActive:hover {
+    text-decoration: none;
+}
+
+li:active, #project button:active, #top:active, #back:active, .fa:active {
+    transform: translateY(2px);
+    border: none;
+    outline: none;
+    transition: transform 0s;
+}
+
+#content {
+    margin: auto;
+    width: 60em;
+}
+
+#project {
+    float: right;
+    margin-top: 1.5em;
+    margin-right: 5em;
+    margin-bottom: 0em;
+    padding-top: 9.5em;
+    padding-bottom: 1em;
+    width: 27.6em;
+}
+
+.card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    background-color: #252525;
+    box-shadow: 0px 0px 10px black;
+    border: none;
+}
+
+.card-body {
+    margin: auto;
+    width: 25em;
+    border-radius: 0px;
+}
+
+.card-text {
+    margin-left: -1.2em;
+}
+
+h1 {
+    position: fixed;
+    z-index: -99;
+    margin: auto;
+    margin-top: 4em;
+    margin-left: 3em;
+    padding: 0.3em;
+    width: 11em;
+    font-weight: bold;
+    text-align: left;
+    color: #BAA14C;
+}
+
+#description {
+    position: fixed;
+    z-index: -99;
+    margin: auto;
+    margin-top: 17.5em;
+    margin-left: 5.5em;
+    padding: 1.5em;
+    padding-left: 3em;
+    padding-right: 31em;
+    width: 51em;
+    text-align: left;
+    background-color: #BAA14C;
+    border-radius: 5px;
+}
+
+#subtitle {
+    font-weight: bold;
+    margin-left: -1.3em;
+}
+
+iframe {
+    margin: auto;
+    width: 25em;
+    height: 27.6em;
+    margin-left: -1.3em;
+    margin-bottom: 1em;  
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0px 0px 1px black;
+}
+
+#llama iframe {
+    height: 20em;
+}
+
+#boss img {
+    width: 25em;
+    margin-bottom: 1em;
+    margin-left: -1.3em;
+    border-radius: 3px;
+    box-shadow: 0px 0px 1px black;
+}
+
+#project button {
+    margin-left: -1.3em;
+    background-color: #BAA14C;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 25em;
+    height: 2em;
+    box-shadow: 0px 0px 1px black;
+}
+
+#project button:hover {
+    background-color: #8a7635;
+    cursor: pointer;
+}
+
+#yellow {
+    color: #BAA14C;
+}
+
+#back {
+    position: fixed;
+    display: block;
+    background-color: transparent;
+    color: #BAA14C;
+    border: 1px solid #BAA14C;
+    border-radius: 5px;
+    bottom: 3em;
+    left: 3em;
+    width: 150px;
+    text-align: center;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    background: -webkit-linear-gradient(0deg, transparent 50%, #BAA14C 50%);
+    background-size: 300px 80px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#back::before {
+	color: rgba(255, 255, 255, 0.83);
+	content: '< ';
+	opacity: 0;
+    margin-left: -15px;
+	transition: all 0.1s;
+}
+
+#back:hover, #back:focus {
+	color: rgba(255, 255, 255, 0.83);
+	text-decoration: none;
+    padding-right: 3px;
+	background-position: 150px 0px;
+    outline:none;
+    cursor: pointer;
+}    
+
+#back:hover::before, #back:focus::before {
+	color: rgba(255, 255, 255, 0.83);
+  	opacity: 1;
+  	margin-left: -10px;
+}
+
+footer {
+    margin: auto;
+    margin-top: -4em;
+    width: 10em;
+}
+
+.fa {
+    font-size: 20px;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.3em;
+    border-radius: 5px;
+}
+
+.fa-linkedin, .fa-linkedin:hover{
+    background: transparent;
+    color: #007bb5;
+}
+
+.fa-github, .fa-github:hover {
+    background: transparent;
+    color: #8730a3;
+}
+
+.fa-envelope, .fa-envelope:hover {
+    background: transparent;
+    color: #BA785F;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="animate.js"></script>
+    <script src="scroll.js"></script>
+</head>
+
+<body class ="preload">
+    <div class="nav">
+        <ul>
+            <li>
+               <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a id="pageActive" href="works.html">WORK▼</i></a>
+                    <div class="dropdown-content">
+                        <a href="game.html">Intro To Game Design</a>
+                        <a href="interactive.html">Interactive 3D Graphics</a>
+                        <a href="type.html">Typography</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+   <div class="loader"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+    <div id="content" class = "transition transition-1 is-active">
+        <h1>INTRO TO 
+            <br>
+            GAME DESIGN
+        </h1>
+        <p id="description">
+            These games are made using p5.js, a JavaScript library for creative coding.
+            <br><br>
+            Group projects are made through multiple prototyping and game testings to optimize gaming experience.
+            <br><br>
+            Some of the games are developed and hosted
+            on Glitch to make collaboration easier.
+            <br><br>
+            All the games are original or existing games with some twists.
+        </p>
+        <div id="project">
+            <div id ="tictactoe" class="card">
+                <div class="card-body">
+                    <p id="subtitle">3-players Tic Tac Toe</p>
+                    <iframe src="https://editor.p5js.org/jj.liew0509/full/3eCEepdde"></iframe>
+                    <p class="card-text">
+                        <em>Controls</em>
+                        <br>
+                        <span id="yellow">Arrow Keys:</span> Move
+                        <br>
+                        <span id="yellow">Space:</span> Place X/O/Tri
+                        <br>
+                        3 in a row to win
+                        <br>
+                        (click inside the game screen before you move)
+                    </p> 
+                </div>
+            </div>
+
+            <div id ="snake" class="card">
+                <div class="card-body">
+                    <p id="subtitle">Snake</p>
+                    <iframe src="https://editor.p5js.org/jj.liew0509/full/gcPD68SDY"></iframe>
+                    <p class="card-text">
+                        <em>Controls</em>
+                        <br>
+                        <span id="yellow">Arrow Keys:</span> Change direction
+                        <br>
+                        <span id="yellow">Space:</span> Pass through self and obstacles for 6 seconds
+                        <br>
+                        <em>Powerups</em>
+                        <br>
+                        <span id="yellow">Speed Reduction:</span> Slows down temporarily
+                        <br>
+                        <span id="yellow">Reverse Growing:</span> Grows shorter for next 5 food
+                        <br>
+                        (click inside the game screen before you move)
+                    </p>
+                </div>
+            </div>
+
+            <div id ="boss" class="card">
+                <div class="card-body">
+                    <p id="subtitle">Sauce Is The Boss</p>
+                    <img src="boss.JPG" alt="sauce-is-the-boss image">
+                    <p class="card-text">
+                        A tower defense game with a twist, where you have to throw pasta 
+                        to fight against the mafia.
+                    </p>
+                    <a href="https://sauce-is-the-boss.glitch.me/" alt="Play Sauce Is The Boss"target="_blank" rel="noopener noreferrer">
+                        <button>Play Now!</button>
+                    </a>
+                </div>
+            </div>
+
+            <div id ="llama" class="card">
+                <div class="card-body">
+                    <p id="subtitle">Llama Dungeon Escape</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vNtX-Z4l18U" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                    </iframe>
+                    <p class="card-text">
+                        2D dungeon crawler - You are a llama who takes on an adventure to save the farmer's chickens. 
+                    </p>
+                    <a href="https://llama-dungeon-escape.glitch.me" alt="Play llama-dungeon-escape" target="_blank" rel="noopener noreferrer">
+                        <button>Play Now!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
+            <a href="https://github.com/jj-liew" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
+            <a href="mailto:kl1369@messiah.edu" class="fa fa-envelope"></a>
+        </footer>
+        <div class="buttons">
+        <a id="back" href="works.html" alt="Go to work page">Back</a>
+    </div>
+    </div>
+   
+</div>
+<script>
+    $(window).on("load", function() {
+        $(".loader").fadeOut("slow");
+        $("body").removeClass("preload");
+    });
+</script>
+</body>

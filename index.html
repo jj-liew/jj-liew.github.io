@@ -11,23 +11,125 @@
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script src="p5/p5.js"></script>
     <script src="sketch.js"></script>
+    <script src="animate.js"></script>
+	<link rel="stylesheet" href="animation.css">
 </head>
 
 <body>
-	<div class="cover">
-		<h1>KEVIN LIEW</h1>
-	</div>
-	<p>Digital Media | Mobile App & Game Design</p>
-	<div class="about">
-		<a class="button" href="#">PORTFOLIO</a>
-	</div>
-	<div class="dragon">
-	<model-viewer camera-controls src="spacePlatform.glb" alt="space"></model-viewer>
-	</div>
-	
-	
-	<!--<footer>© 2022 Kevin Liew</footer>-->
-	
+	<div></div>
+	<div class = "transition transition-2 is-active">
+		<canvas id ="space"></canvas>
+		<script src="three.js-master/build/three.js"></script>
+		<script type ="module" src="three.js-master/examples/jsm/loaders/GLTFLoader.js"></script>
+		<script type ="module" src="three.js-master/examples/jsm/controls/OrbitControls.js"></script>
+		<script type = "module">
+			import {GLTFLoader} from "./three.js-master/examples/jsm/loaders/GLTFLoader.js";
+			import {OrbitControls} from "./three.js-master/examples/jsm/controls/OrbitControls.js";
+			
+			const scene = new THREE.Scene();
 
-</body>
+			const space = document.getElementById("space");
+
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			
+
+			const renderer = new THREE.WebGLRenderer({canvas: space, alpha: true, antialias: true });
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.PCFSoftShadowMap; 
+			renderer.setSize(window.innerWidth, window.innerHeight);
+
+			const hlight = new THREE.AmbientLight (0x404040, 1);
+			//scene.add(hlight);
+
+			const light = new THREE.PointLight(0x69A697, 5);
+	        light.position.set(20, 15, 20);
+	        light.castShadow = true;
+	        light.shadow.bias = -0.001;
+	        light.shadow.mapSize.width = 3200;
+	        light.shadow.mapSize.height = 3200;
+	        scene.add(light);
+	        //const pointLightHelper = new THREE.PointLightHelper( light, 10 );
+			//scene.add( pointLightHelper );
+
+	        const light2 = new THREE.PointLight(0xB37983, 10);
+	        light2.position.set(20, 20, -20);
+	        light2.castShadow = true;
+	        light2.shadow.bias = -0.001;
+	        light2.shadow.mapSize.width = 3200;
+	        light2.shadow.mapSize.height = 3200;
+	        //scene.add(light2);
+	        //const pointLightHelper2 = new THREE.PointLightHelper( light2, 10 );
+			//scene.add( pointLightHelper2 );
+
+	        const light3 = new THREE.PointLight(0xBF9565, 40);
+	        light3.position.set(-65, 25, -60);
+	        light3.castShadow = true;
+	        light3.shadow.bias = -0.001;
+	        light3.shadow.mapSize.width = 3200;
+	        light3.shadow.mapSize.height = 3200;
+	        scene.add(light3);
+	        //const pointLightHelper3 = new THREE.PointLightHelper( light3, 10 );
+			//scene.add( pointLightHelper3 );
+
+			const light4 = new THREE.PointLight(0xBF9565, 1);
+	        light4.position.set(-25, 10, 20);
+	        light4.castShadow = true;
+	        light4.shadow.bias = -0.001;
+	        light4.shadow.mapSize.width = 3200;
+	        light4.shadow.mapSize.height = 3200;
+	        //scene.add(light4);
+	        //const pointLightHelper4 = new THREE.PointLightHelper( light4, 10 );
+			//scene.add( pointLightHelper4 );
+
+			const controls = new OrbitControls(camera, renderer.domElement);
+			camera.position.set(-40, 20, 40);
+			controls.enablePan = false;
+			controls.enableZoom = false;
+			controls.autoRotate = true;
+			controls.autoRotateSpeed = 0.5;			
+
+			//document.body.appendChild(renderer.domElement);
+
+			let loader = new GLTFLoader();
+			loader.load('spacePlatform.glb', function(gltf){
+				gltf.scene.traverse(function (child) {
+				   if (child.isMesh) {
+				     child.castShadow = true;
+				     child.receiveShadow = true;
+				   }
+				});
+				let spacePlat = gltf.scene;
+
+				spacePlat.position.set(0, 0, 0);
+				scene.add(gltf.scene);
+				scene.add(camera);
+				camera.add(light);
+				camera.add(light3);
+				renderer.render(scene, camera);
+
+				animate();
+
+			});
+
+			function animate() {
+
+				renderer.render(scene, camera);
+				controls.update();	
+				requestAnimationFrame(animate);
+			}
+
+		</script>
+		
+
+		<div class="text">
+			<div class="cover">
+				<h1>KEVIN LIEW</h1>
+			</div>
+			<p>Digital Media | Mobile App & Game Design</p>
+			<div class="about">
+				<a class="button" href="about.html">PORTFOLIO</a>
+			</div>
+		</div>
+	</div>
+	</body>
 </html>

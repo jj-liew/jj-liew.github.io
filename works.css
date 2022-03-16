@@ -1,0 +1,183 @@
+body {
+	background-color: #181818;
+}
+
+.nav {
+    position: fixed;
+	top: 0;
+    left: 0;
+    width:  100%;
+    padding-top: 2.0em;
+    padding-bottom: 1em;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width:  20.07em;
+    text-align: center;
+    font-weight: 600;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+li {
+    display: inline-block;
+    padding-left: 1.2em;
+    padding-right: 1.2em;       
+}
+
+li:active, .card:active, #about:active, .fa:active{
+    transform: translateY(2px);
+    transition: transform 0s;
+}
+
+a, h1, .card-text {
+    color: rgba(255, 255, 255, 0.83);
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5596BA;
+}
+
+#pageActive {
+	color: #5596BA;
+	font-weight: 600;
+    border-radius: 5px;
+}
+
+#pageActive:hover {
+    text-decoration: none;
+}
+
+#content {
+    margin: auto;
+    width: 60em;
+}
+
+h1 {
+    margin-top: 2.5em;
+    margin-right: 6.3em;
+    padding: 0.3em;
+    font-size: 76px;
+    font-weight: bold;
+    text-align: right;
+}
+
+#menu {
+    margin-top: -12em;
+    margin-left: 30em;
+}
+
+.card {
+    margin: auto;
+    width: 15em;
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+
+.card a {
+    padding: 1em;
+}
+
+.card a:hover {
+    color: rgba(255, 255, 255, 0.83);
+}
+
+#game:hover {
+    cursor: pointer;
+    background-color: #BAA14C;
+    transition: background-color 0.5s;
+}
+
+#interactive:hover {
+    cursor: pointer;
+    background-color: #BA785F;
+    transition: background-color 0.5s;
+}
+
+#type:hover {
+    cursor: pointer;
+    background-color: #569480;
+    transition: background-color 0.5s;
+}
+
+#about {
+    position: fixed;
+    display: block;
+    background-color: transparent;
+    color: #5596BA;
+    border: 1px solid #5596BA;
+    border-radius: 5px;
+    bottom: 3em;
+    left: 3em;
+    width: 150px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    text-align: center;
+    background: -webkit-linear-gradient(0deg, transparent 50%, #5596BA 50%);
+    background-size: 300px 80px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+#about::before {
+	color: rgba(255, 255, 255, 0.83);
+	content: '< ';
+	opacity: 0;
+    margin-left: -15px;
+	transition: all 0.1s;
+}
+
+#about:hover, #about:focus {
+	color: rgba(255, 255, 255, 0.83);
+	text-decoration: none;
+    padding-right: 3px;
+	background-position: 150px 0px;
+    outline: none;
+}    
+
+#about:hover::before, #about:focus::before {
+	color: rgba(255, 255, 255, 0.83);
+  	opacity: 1;
+  	margin-left: -10px;
+}
+
+footer {
+    margin: auto;
+    margin-top: 13.5em;
+    width: 10em;
+}
+
+.fa {
+    font-size: 20px;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5em 0.3em;
+    border-radius: 5px;
+}
+
+.fa-linkedin, .fa-linkedin:hover{
+    background: transparent;
+    color: #007bb5;
+}
+
+.fa-github, .fa-github:hover {
+    background: transparent;
+    color: #8730a3;
+}
+
+.fa-envelope, .fa-envelope:hover {
+    background: transparent;
+    color: #BA785F;
+}
+
