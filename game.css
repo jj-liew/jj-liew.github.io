@@ -111,11 +111,9 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
 }
 
 #project {
-    float: right;
-    margin-top: 1.5em;
-    margin-right: 5em;
-    margin-bottom: 0em;
-    padding-top: 9.5em;
+    margin: auto;
+    margin-top: 10em;
+    margin-left: 9.5em;
     padding-bottom: 1em;
     width: 27.6em;
 }
@@ -124,53 +122,60 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1em;
-    background-color: #252525;
-    box-shadow: 0px 0px 10px black;
+    padding-top: 7.7em;
+    padding-bottom: 2em;
+    background-color: transparent;
     border: none;
 }
 
 .card-body {
     margin: auto;
-    width: 25em;
     border-radius: 0px;
 }
 
 .card-text {
-    margin-left: -1.2em;
+    float: right;
+    margin-right: -25.2em;
+    width: 25em;
+    padding: 2em;
+    background-color: #181818;
+    box-shadow: 0px 0px 10px black;
 }
 
 h1 {
-    position: fixed;
+    float: left;
     z-index: -99;
     margin: auto;
-    margin-top: 4em;
-    margin-left: 3em;
+    margin-left: 0em;
     padding: 0.3em;
-    width: 11em;
+    width: 15em;
     font-weight: bold;
-    text-align: left;
+    font-size: 50px;
+    text-align: right;
     color: #BAA14C;
 }
 
 #description {
     position: fixed;
+    float: left;
     z-index: -99;
     margin: auto;
-    margin-top: 17.5em;
-    margin-left: 5.5em;
+    margin-top: 9em;
+    left: -1%;
     padding: 1.5em;
     padding-left: 3em;
-    padding-right: 31em;
-    width: 51em;
+    padding-right: 3em;
+    width: 20em;
     text-align: left;
     background-color: #BAA14C;
-    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 15px;
 }
 
 #subtitle {
     font-weight: bold;
-    margin-left: -1.3em;
+    font-size: 20px;
+    color: #BAA14C;
 }
 
 iframe {
@@ -197,12 +202,12 @@ iframe {
 }
 
 #project button {
-    margin-left: -1.3em;
     background-color: #BAA14C;
     color: white;
     border-radius: 5px;
+    margin-top: 1em;
     border: none;
-    width: 25em;
+    width: 10em;
     height: 2em;
     box-shadow: 0px 0px 1px black;
 }
