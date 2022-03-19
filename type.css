@@ -13,8 +13,8 @@ body {
     width:  100%;
     padding-top: 2.0em;
     padding-bottom: 1em;
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    background-color: #181818;
+    box-shadow: 0px 0px 10px #181818;
     z-index: 1;
 }
 
@@ -38,7 +38,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-left: -3em;
+    margin-left: -3.5em;
     background-color: #5596BA;
     border-radius: 5px;
     min-width: 150px;

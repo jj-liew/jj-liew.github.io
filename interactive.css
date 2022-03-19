@@ -38,7 +38,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-left: -3em;
+    margin-left: -3.5em;
     background-color: #5596BA;
     border-radius: 5px;
     min-width: 150px;

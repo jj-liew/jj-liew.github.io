@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="home.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="p5/p5.js"></script>
     <script src="sketch.js"></script>
     <script src="animate.js"></script>
@@ -17,7 +18,27 @@
 </head>
 
 <body>
-	<div></div>
+	<div class="nav">
+        <ul>
+            <li>
+                <a id="pageActive"  href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a href="works.html">WORK▼</i></a>
+                    <div class="dropdown-content">
+                        <a href="game.html">Intro To Game Design</a>
+                        <a href="interactive.html">Interactive 3D Graphics</a>
+                        <a href="type.html">Typography</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+	<div class="loader"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
 	<div class = "transition transition-2 is-active">
 		<canvas id ="space"></canvas>
 		<script src="three.js-master/build/three.js"></script>
@@ -132,5 +153,11 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		$(window).on("load", function() {
+			$(".loader").fadeOut("slow");
+			$("body").removeClass("preload");
+		});
+	</script>
 	</body>
 </html>

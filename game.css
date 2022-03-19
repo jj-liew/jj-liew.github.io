@@ -1,8 +1,5 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    overflow: hidden;
 	background-color: #181818;
 }
 
@@ -17,8 +14,8 @@ body {
     width:  100%;
     padding-top: 2.0em;
     padding-bottom: 1em;
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    background-color: #181818;
+    box-shadow: 0px 0px 7px black;
     z-index: 1;
 }
 
@@ -42,7 +39,7 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-left: -3em;
+    margin-left: -3.5em;
     background-color: #5596BA;
     border-radius: 5px;
     min-width: 150px;
@@ -111,69 +108,74 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
 }
 
 #project {
-    margin: auto;
-    margin-top: 10em;
-    margin-left: 9.5em;
-    padding-bottom: 1em;
-    width: 27.6em;
+    float: right;
+    margin-right: -18.6em;
+    margin-top: -31.5em;
+    width: 110%;
+    background-image: linear-gradient(to right bottom, #baa14c, #a5a956, #91b066, #7eb57a, #6db88e, #4ab19c, #24a8a9, #009eb3, #0086b5, #206bad, #514c95, #6a276e);
+}
+
+.carousel {
 }
 
 .card {
-    display: block;
-    margin-left: auto;
+    margin-left: 7.5em;
     margin-right: auto;
-    padding-top: 7.7em;
-    padding-bottom: 2em;
-    background-color: transparent;
+    margin-bottom: 3.5em;
+    margin-top: 5em;
+    padding-top: 1em;
+    padding-bottom: 0.9em;
+    background-color: #303030;
+    box-shadow: 0px 3px 20px #303030;
+    border-radius: 5px;
     border: none;
+    width: 50.5em;
 }
 
 .card-body {
-    margin: auto;
     border-radius: 0px;
 }
 
 .card-text {
     float: right;
-    margin-right: -25.2em;
-    width: 25em;
-    padding: 2em;
-    background-color: #181818;
-    box-shadow: 0px 0px 10px black;
+    width: 20em;
+    border-radius: 5px;
+    margin-left: 50em;
+    margin-top: -29em;
+    font-weight: 550;
 }
 
 h1 {
     float: left;
-    z-index: -99;
-    margin: auto;
-    margin-left: 0em;
     padding: 0.3em;
+    margin-top: 6em;
+    margin-left: -10.5em;
     width: 15em;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     text-align: right;
     color: #BAA14C;
 }
 
 #description {
-    position: fixed;
     float: left;
-    z-index: -99;
-    margin: auto;
-    margin-top: 9em;
-    left: -1%;
+    position: relative;
+    z-index: 99;
+    margin-top: 23em;
+    margin-left: -22em;
     padding: 1.5em;
     padding-left: 3em;
     padding-right: 3em;
-    width: 20em;
+    width: 25em;
     text-align: left;
-    background-color: #BAA14C;
+    background-color: #252525;
     box-shadow: 0px 0px 10px black;
-    border-radius: 15px;
+    border-right: 40px solid #BAA14C;
+    border-radius: 10px;
 }
 
 #subtitle {
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 20px;
     color: #BAA14C;
 }
@@ -182,43 +184,38 @@ iframe {
     margin: auto;
     width: 25em;
     height: 27.6em;
-    margin-left: -1.3em;
     margin-bottom: 1em;  
-    border-radius: 3px;
+    border-radius: 5px;
     border: none;
-    box-shadow: 0px 0px 1px black;
+    box-shadow: 0px 0px 5px black;
 }
 
 #llama iframe {
-    height: 20em;
+    height: 27.5em;
 }
 
 #boss img {
-    width: 25em;
+    height: 27.9em;
     margin-bottom: 1em;
-    margin-left: -1.3em;
-    border-radius: 3px;
-    box-shadow: 0px 0px 1px black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
 }
 
 #project button {
     background-color: #BAA14C;
-    color: white;
+    color: rgba(255, 255, 255, 0.83);
+    font-weight: bolder;
     border-radius: 5px;
     margin-top: 1em;
     border: none;
     width: 10em;
     height: 2em;
-    box-shadow: 0px 0px 1px black;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.83);
 }
 
 #project button:hover {
-    background-color: #8a7635;
+    background-color: #7a6d42;
     cursor: pointer;
-}
-
-#yellow {
-    color: #BAA14C;
 }
 
 #back {

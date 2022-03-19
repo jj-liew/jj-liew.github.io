@@ -61,51 +61,65 @@ a:hover {
 }
 
 h1 {
-    margin-top: 2.5em;
-    margin-right: 6.3em;
+    margin: auto;
+    margin-top: 1.5em;
     padding: 0.3em;
     font-size: 76px;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
 }
 
 #menu {
-    margin-top: -12em;
-    margin-left: 30em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 4em;
+    text-align: center;
 }
 
 .card {
     margin: auto;
     width: 15em;
-    margin-bottom: 1em;
-    margin-left: 1.5em;
-    background-color: transparent;
+    margin-bottom: -6em;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 8px;
     transition: background-color 0.5s;
 }
 
 .card a {
-    padding: 1em;
+    padding: 6em 1em;
 }
 
 .card a:hover {
     color: rgba(255, 255, 255, 0.83);
 }
 
+#game {
+    background-color: #BAA14C;
+}
+
+#interactive {
+    background-color: #BA785F;
+}
+
+#type {
+    background-color: #569480;
+}
+
 #game:hover {
     cursor: pointer;
-    background-color: #BAA14C;
+    background-color: #665a34;
     transition: background-color 0.5s;
 }
 
 #interactive:hover {
     cursor: pointer;
-    background-color: #BA785F;
+    background-color: #583b30;
     transition: background-color 0.5s;
 }
 
 #type:hover {
     cursor: pointer;
-    background-color: #569480;
+    background-color: #37534a;
     transition: background-color 0.5s;
 }
 

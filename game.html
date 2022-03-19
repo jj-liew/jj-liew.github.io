@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="game.css">
     <link rel="stylesheet" href="animation.css">
@@ -35,7 +41,9 @@
     </div>
    <div class="loader"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <div id="content" class = "transition transition-1 is-active">
-        <h1>INTRO TO GAME DESIGN
+        <h1>INTRO TO
+            <br>
+            GAME DESIGN
         </h1>
         <p id="description">
             These games are made using p5.js, a JavaScript library for creative coding.
@@ -46,95 +54,130 @@
             on Glitch to make collaboration easier.
         </p>
         <div id="project">
-            <div id ="tictactoe" class="card">
-                <div class="card-body">
-                    <iframe src="https://editor.p5js.org/jj.liew0509/full/3eCEepdde"></iframe>
-                    
-                    <p class="card-text">
-                        <span id="subtitle">Tic Tac Toe</span> 
-                        <br>
-                        <br>
-                        <em>Controls</em>
-                        <br>
-                        <span id="yellow">Arrow Keys:</span> Move
-                        <br>
-                        <span id="yellow">Space:</span> Place X/O/Tri
-                        <br><br>
-                        <em>Instruction</em>
-                        <br>
-                        3 players take turns to place their elements, black tile is not placeable.<br>Press "r" to restart.
-                        <br><br>
-                        Win condition: 3 in a row to win 
-                        <br>
-                        (click inside the game screen before you move)
-                    </p> 
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div id ="tictactoe" class="card">
+                        <div class="card-body">
+                            <iframe src="https://editor.p5js.org/jj.liew0509/full/3eCEepdde"></iframe>
+                            
+                            <p class="card-text">
+                                <span id="subtitle">Tic Tac Toe</span> 
+                                <br>
+                                <br>
+                                <em>Controls</em>
+                                <br>
+                                <span id="yellow">Arrow Keys:</span> Move
+                                <br>
+                                <span id="yellow">Space:</span> Place X/O/Tri
+                                <br><br>
+                                <em>Instruction</em>
+                                <br>
+                                3 players take turns to place their elements, black tile is not placeable.<br>Press "r" to restart.
+                                <br><br>
+                                <em>Win condition</em>
+                                <br>
+                                3 in a row to win 
+                                <br>
+                                (click inside the game screen before you move)
+                            </p> 
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div id ="snake" class="card">
+                        <div class="card-body">
+                            <iframe src="https://editor.p5js.org/jj.liew0509/full/gcPD68SDY"></iframe>
+                            <p class="card-text">
+                                <span id="subtitle">Snake</span> 
+                                <br> 
+                                <br>
+                                <em>Controls</em>
+                                <br>
+                                <span id="yellow">Arrow Keys:</span> Change direction
+                                <br>
+                                <span id="yellow">Space:</span> Pass through everything for 6 seconds
+                                <br><br>
+                                <em>Powerups</em>
+                                <br>
+                                <span id="yellow">Speed Reduction:</span> Slows down temporarily
+                                <br>
+                                <span id="yellow">Reverse Growing:</span> Grows shorter for next 5 food
+                                <br><br>
+                                <em>Instruction</em>
+                                <br>
+                                Score > 15: food will shift<br>Score > 25: spawn obstacles<br>Score > 35: spawn laserbeams<br>Press "r" to restart.
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div id ="boss" class="card">
+                        <div class="card-body">
+                            <img src="boss.JPG" alt="sauce-is-the-boss image">
+                            <p class="card-text">
+                                <span id="subtitle">Sauce Is The Boss</span>
+                                <br><br>
+                                A tower defense game with a twist, where you have to collect and throw pasta to fight against 
+                                the mafia. Keep them away from the kitchen where your secret pasta sauce is located.
+                                <br><br>
+                                This project is a team effort and is made possible using Gltich that hosted the game.
+                                <br><br>
+                                <a href="https://sauce-is-the-boss.glitch.me/" alt="Play Sauce Is The Boss"target="_blank" rel="noopener noreferrer">
+                                    <button>Play Now!</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div id ="llama" class="card">
+                        <div class="card-body">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/vNtX-Z4l18U" 
+                            title="YouTube video player" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                            </iframe>
+                            <p class="card-text">
+                                <span id="subtitle">Llama Dungeon Escape</span> 
+                                <br>
+                                <br> 
+                                2D dungeon crawler - You are a llama who takes on an adventure to save the farmer's chickens from the evil foxes.
+                                Each room has different challenges waiting for you to solve!
+                                <br><br>
+                                This project is a team effort and is made possible using Gltich that hosted the game.
+                                <br><br>
+                                <a href="https://llama-dungeon-escape.glitch.me" alt="Play llama-dungeon-escape" target="_blank" rel="noopener noreferrer">
+                                    <button>Play Now!</button>
+                                </a>
+                            </p>
+                            
+                        </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            
 
-            <div id ="snake" class="card">
-                <div class="card-body">
-                    <iframe src="https://editor.p5js.org/jj.liew0509/full/gcPD68SDY"></iframe>
-                    <p class="card-text">
-                        <span id="subtitle">Snake</span> 
-                        <br> 
-                        <br>
-                        <em>Controls</em>
-                        <br>
-                        <span id="yellow">Arrow Keys:</span> Change direction
-                        <br>
-                        <span id="yellow">Space:</span> Pass through everything for 6 seconds
-                        <br><br>
-                        <em>Powerups</em>
-                        <br>
-                        <span id="yellow">Speed Reduction:</span> Slows down temporarily
-                        <br>
-                        <span id="yellow">Reverse Growing:</span> Grows shorter for next 5 food
-                        <br><br>
-                        <em>Instruction</em>
-                        <br>
-                        Score > 15: food will shift<br>Score > 25: spawn obstacles<br>Score > 35: spawn laserbeams<br>Press "r" to restart.
-                    </p>
-                </div>
-            </div>
+            
 
-            <div id ="boss" class="card">
-                <div class="card-body">
-                    <img src="boss.JPG" alt="sauce-is-the-boss image">
-                    <p class="card-text">
-                        <span id="subtitle">Sauce Is The Boss</span>
-                        <br><br>
-                        A tower defense game with a twist, where you have to throw pasta 
-                        to fight against the mafia.
-                        <br><br>
-                        This project is a team effort, and is made possible using Gltich that hosted the game.
-                        <a href="https://sauce-is-the-boss.glitch.me/" alt="Play Sauce Is The Boss"target="_blank" rel="noopener noreferrer">
-                            <button>Play Now!</button>
-                        </a>
-                    </p>
-                </div>
-            </div>
+            
 
-            <div id ="llama" class="card">
-                <div class="card-body">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vNtX-Z4l18U" 
-                    title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                    </iframe>
-                    <p class="card-text">
-                        <span id="subtitle">Llama Dungeon Escape</span> 
-                        <br>
-                        <br> 
-                        2D dungeon crawler - You are a llama who takes on an adventure to save the farmer's chickens from the evil foxes.
-                        <br><br>
-                        This project is a team effort, and is made possible using Gltich that hosted the game.
-                        <a href="https://llama-dungeon-escape.glitch.me" alt="Play llama-dungeon-escape" target="_blank" rel="noopener noreferrer">
-                            <button>Play Now!</button>
-                        </a>
-                    </p>
-                    
-                </div>
-            </div>
+            
         </div>
         <footer>
             <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
