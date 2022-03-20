@@ -112,11 +112,37 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
     margin-right: -18.6em;
     margin-top: -31.5em;
     width: 110%;
-    background-image: linear-gradient(to right bottom, #baa14c, #a5a956, #91b066, #7eb57a, #6db88e, #4ab19c, #24a8a9, #009eb3, #0086b5, #206bad, #514c95, #6a276e);
+    background-image: linear-gradient(to right bottom, #baa14c, #a5a956, #91b066, #7eb57a, 
+                                    #6db88e, #4ab19c, #24a8a9, #009eb3, #0086b5, 
+                                    #206bad, #514c95, #6a276e);
 }
 
-.carousel {
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: 1s;
+	transition-property: opacity;
 }
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+}
+
 
 .card {
     margin-left: 7.5em;
@@ -125,8 +151,7 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
     margin-top: 5em;
     padding-top: 1em;
     padding-bottom: 0.9em;
-    background-color: #303030;
-    box-shadow: 0px 3px 20px #303030;
+    background-color: transparent;
     border-radius: 5px;
     border: none;
     width: 50.5em;
@@ -148,7 +173,7 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
 h1 {
     float: left;
     padding: 0.3em;
-    margin-top: 6em;
+    margin-top: 4em;
     margin-left: -10.5em;
     width: 15em;
     font-weight: bold;
@@ -161,7 +186,7 @@ h1 {
     float: left;
     position: relative;
     z-index: 99;
-    margin-top: 23em;
+    margin-top: 19.5em;
     margin-left: -22em;
     padding: 1.5em;
     padding-left: 3em;
@@ -177,7 +202,7 @@ h1 {
 #subtitle {
     font-weight: bolder;
     font-size: 20px;
-    color: #BAA14C;
+    color: #fcd1a8;
 }
 
 iframe {
@@ -187,7 +212,7 @@ iframe {
     margin-bottom: 1em;  
     border-radius: 5px;
     border: none;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 3px 5px black;
 }
 
 #llama iframe {
@@ -198,7 +223,7 @@ iframe {
     height: 27.9em;
     margin-bottom: 1em;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 3px 5px black;
 }
 
 #project button {
@@ -210,7 +235,7 @@ iframe {
     border: none;
     width: 10em;
     height: 2em;
-    box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.83);
+    box-shadow: 0px 1px 3px black;
 }
 
 #project button:hover {
@@ -259,12 +284,6 @@ iframe {
 	color: rgba(255, 255, 255, 0.83);
   	opacity: 1;
   	margin-left: -10px;
-}
-
-footer {
-    margin: auto;
-    margin-top: -4em;
-    width: 10em;
 }
 
 .fa {

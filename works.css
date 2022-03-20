@@ -77,6 +77,7 @@ h1 {
 }
 
 .card {
+    position: relative;
     margin: auto;
     width: 15em;
     margin-bottom: -6em;
@@ -194,4 +195,29 @@ footer {
     background: transparent;
     color: #BA785F;
 }
+
+.fa-gamepad {
+    pointer-events: none;
+    position: absolute;
+    top: 0.1%;
+    left: 0.1%;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.fa-image {
+    pointer-events: none;
+    position: absolute;
+    top: 0.1%;
+    left: 0.1%;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.fa-cube {
+    pointer-events: none;
+    position: absolute;
+    top: 0.1%;
+    left: 0.1%;
+    color: rgba(255, 255, 255, 0.83);
+}
+
 

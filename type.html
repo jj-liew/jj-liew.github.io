@@ -42,49 +42,39 @@
     <div id="content" class = "transition transition-1 is-active">
         <h1>TYPOGRAPHY
         </h1>
-        <div id="typeMenu">
-            <div onclick="cardPressed1()" id ="comp" class="card">
-                <a href="#" alt="comp">
-                    <div class="card-body">
-                        <p class="card-text">COMPOSITIONS</p>
-                    </div>
-                </a>
-            </div>
-            <div onclick="cardPressed2()" id ="verb" class="card">
-                <a href="#" alt="verb">
-                    <div class="card-body">
-                        <p class="card-text">VISUAL VERBS</p>
-                    </div>
-                </a>
-            </div>
-            <div onclick="cardPressed3()" id ="quote" class="card">
-                <a href="#" alt="quote">
-                    <div class="card-body">
-                        <p class="card-text">DYNAMIC QUOTES</p>
-                    </div>
-                </a>
-            </div>
-            <div onclick="cardPressed4()" id ="text" class="card">
-                <a href="#" alt="text">
-                    <div class="card-body">
-                        <p class="card-text">TEXT HEAVY SPREADS</p>
-                    </div>
-                </a>
-            </div>
-            <div onclick="cardPressed5()" id ="env" class="card">
-                <a href="#" alt="env">
-                    <div class="card-body">
-                        <p class="card-text">ENVIRONMENTAL</p>
-                    </div>
-                </a>
-            </div>
-        </div>
         <p id="description">
             Created images with strong composition utilizing white space, shaped words in different compositions and structures to convey
             different messages to the viewers, and designed text-heavy spreads which emphasized on hierarchy, texture, flow and
             composition.
         </p>
         <div class="images">
+            <div id="typeMenu">
+                <div onclick="cardPressed1()" id ="comp">
+                    <a href="#" alt="comp">
+                        COMPOSITIONS
+                    </a>
+                </div>
+                <div onclick="cardPressed2()" id ="verb">
+                    <a href="#" alt="verb">
+                        VISUAL VERBS
+                    </a>
+                </div>
+                <div onclick="cardPressed3()" id ="quote">
+                    <a href="#" alt="quote">
+                        DYNAMIC QUOTES
+                    </a>
+                </div>
+                <div onclick="cardPressed4()" id ="text">
+                    <a href="#" alt="text">
+                        TEXT HEAVY SPREADS
+                    </a>
+                </div>
+                <div onclick="cardPressed5()" id ="env">
+                    <a href="#" alt="env">
+                        ENVIRONMENTAL
+                    </a>
+                </div>
+            </div>
         <div id="project1">
             <img src="type1-1.jpg" alt="Project 1-1">
             <img src="type1-2.jpg" alt="Project 1-2"> 
@@ -123,21 +113,16 @@
             <img src="type5-12.jpg" alt="Project 5-12">     
         </div>     
     </div>
-    <footer>
-        <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
-        <a href="https://github.com/jj-liew" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
-        <a href="mailto:kl1369@messiah.edu" class="fa fa-envelope"></a>
-    </footer>
     <div class="buttons">
     <a id="back" href="works.html" alt="Go to work page">Back</a>
 </div>
 </div>
     <script>
-        card1 = document.getElementById("comp");
-        card2 = document.getElementById("verb");
-        card3 = document.getElementById("quote");
-        card4 = document.getElementById("text");
-        card5 = document.getElementById("env");
+        card1 = document.querySelector("#comp a");
+        card2 = document.querySelector("#verb a");
+        card3 = document.querySelector("#quote a");
+        card4 = document.querySelector("#text a");
+        card5 = document.querySelector("#env a");
         p1 = document.getElementById("project1");
         p2 = document.getElementById("project2");
         p3 = document.getElementById("project3");
@@ -145,12 +130,12 @@
         p5 = document.getElementById("project5");
         
         function cardPressed1() {
-          card1.style.backgroundColor = '#569480';
-          card2.style.backgroundColor = 'transparent';
-          card3.style.backgroundColor = 'transparent';
-          card4.style.backgroundColor = 'transparent';
-          card5.style.backgroundColor = 'transparent';
-          p1.style.display = "block";
+          card1.style.color = "#569480";
+          card2.style.color = "white";
+          card3.style.color = "white";
+          card4.style.color = "white";
+          card5.style.color = "white";
+          p1.style.display = "grid";
           p2.style.display = "none";
           p3.style.display = "none";
           p4.style.display = "none";
@@ -159,12 +144,12 @@
           document.documentElement.scrollTop = 0;
         }
         function cardPressed2() {
-          card2.style.backgroundColor = '#569480';
-          card1.style.backgroundColor = 'transparent';
-          card3.style.backgroundColor = 'transparent';
-          card4.style.backgroundColor = 'transparent';
-          card5.style.backgroundColor = 'transparent';
-          p2.style.display = "block";
+          card2.style.color = "#569480";
+          card1.style.color = "white";
+          card3.style.color = "white";
+          card4.style.color = "white";
+          card5.style.color = "white";
+          p2.style.display = "grid";
           p1.style.display = "none";
           p3.style.display = "none";
           p4.style.display = "none";
@@ -173,12 +158,12 @@
           document.documentElement.scrollTop = 0;
         }
         function cardPressed3() {
-          card3.style.backgroundColor = '#569480';
-          card1.style.backgroundColor = 'transparent';
-          card2.style.backgroundColor = 'transparent';
-          card4.style.backgroundColor = 'transparent';
-          card5.style.backgroundColor = 'transparent';
-          p3.style.display = "block";
+          card3.style.color = "#569480";
+          card1.style.color = "white";
+          card2.style.color = "white";
+          card4.style.color = "white";
+          card5.style.color = "white";
+          p3.style.display = "grid";
           p1.style.display = "none";
           p2.style.display = "none";
           p4.style.display = "none";
@@ -187,12 +172,12 @@
           document.documentElement.scrollTop = 0;
         }
         function cardPressed4() {
-          card4.style.backgroundColor = '#569480';
-          card1.style.backgroundColor = 'transparent';
-          card2.style.backgroundColor = 'transparent';
-          card3.style.backgroundColor = 'transparent';
-          card5.style.backgroundColor = 'transparent';
-          p4.style.display = "block";
+          card4.style.color = "#569480";
+          card1.style.color = "white";
+          card2.style.color = "white";
+          card3.style.color = "white";
+          card5.style.color = "white";
+          p4.style.display = "grid";
           p1.style.display = "none";
           p2.style.display = "none";
           p3.style.display = "none";
@@ -201,12 +186,12 @@
           document.documentElement.scrollTop = 0;
         }
         function cardPressed5() {
-          card5.style.backgroundColor = '#569480';
-          card1.style.backgroundColor = 'transparent';
-          card2.style.backgroundColor = 'transparent';
-          card3.style.backgroundColor = 'transparent';
-          card4.style.backgroundColor = 'transparent';
-          p5.style.display = "block";
+          card5.style.color = "#569480";
+          card1.style.color = "white";
+          card2.style.color = "white";
+          card3.style.color = "white";
+          card4.style.color = "white";
+          p5.style.display = "grid";
           p1.style.display = "none";
           p2.style.display = "none";
           p3.style.display = "none";
