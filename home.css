@@ -1,24 +1,31 @@
 html {
-	overflow: hidden;
-}
-
-body {
-	background-color: #181818	;
 }
 
 body {
 	background-color: #181818;
 }
 
+#bgImg {
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("personalblogimg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
 .nav {
     position: fixed;
-	top: 0;
+	  top: 0;
     left: 0;
     width:  100%;
     padding-top: 2.0em;
     padding-bottom: 1em;
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
     z-index: 1;
 }
 
@@ -79,8 +86,16 @@ li {
     transition: transform 0s;
 }
 
-a, h1, h3, p, #name {
+h1, h3, p, #name {
     color: rgba(255, 255, 255, 0.83);
+}
+
+.nav a {
+  color: #000000;
+}
+
+.nav a:hover {
+  color: rgba(255, 255, 255, 0.83);
 }
 
 a:hover {
@@ -89,9 +104,9 @@ a:hover {
 }
 
 #pageActive {
-	color: #5596BA;
+  color: rgba(255, 255, 255, 0.83);
 	font-weight: 600;
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 #pageActive:hover {
@@ -102,12 +117,9 @@ p {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	opacity: 0;
-	animation-name: fadein;
 	animation-duration: 3s;
 	animation-delay: 3.5s;
 	animation-fill-mode: forwards;
-	transform: translate(0px, 395px);
 }
 
 h1, p, footer {
@@ -117,13 +129,8 @@ h1, p, footer {
 
 h1 {
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -9em;
-	margin-bottom: -3.6em;
-	font-size: 52px;
+	font-size: 42px;
 	font-weight: 600;
-	transform: translate(0px, 50px);
 }
 
 @keyframes fadein {
@@ -137,33 +144,27 @@ h1 {
 }
 
 .coverImg {
-	opacity: 0;
-	animation-name: fadein;
 	animation-duration: 2.5s;
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
 }
 
 .cover {
-	opacity: 0;
-	animation-name: fadein, movedown;
 	animation-duration: 1.5s, 1s;
 	animation-delay: 1s, 2s;
 	animation-fill-mode: forwards;
+  margin: 0 auto;
+  margin-bottom: 3em;
+  margin-top: 32em;
+  width: 100%;
 }
 
 a {
 	color: rgba(255, 255, 255, 0.87);
 }
 
-.about:active {
-	transform: translateY(400px);
-	transition: transform 0s;
-}
-
 .about {
 	text-align: center;
-	transform: translate(0px, 395px);
 }
 
 a.button {
@@ -173,89 +174,15 @@ a.button {
 	background-size: 700px 650px;
 	font-size: 20px;
 	font-weight: 600;
-	padding: 0.5em 4.9em;
-	-webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-    opacity: 0;
-	animation-name: fadein;
-	animation-duration: 2.5s;
-	animation-delay: 4s;
-	animation-fill-mode: forwards;
-}
-
-a.button:after {
-	color: black;
-	content: '﹀';
-	position: absolute;
-	opacity: 0;  
-	top: 30px;
-	left: 49.35%;
-	transition: 0.2s;
+  padding: 0.5em 2em;
+	-webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 a.button:hover, a.button:focus {
 	color: black;
 	text-decoration: none;
-    padding-bottom: 25px;
 	box-shadow: 0px 0px 5px white;
 	background-position: 0 62px;
 }
-
-a.button:hover:after, a.button:focus:after {
-	color: black;
-  	opacity: 1;
-  	top: 21px;
-}
-
-.text {
-	z-index: 100;
-}
-
-footer {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	margin-top: 3.5em;
-	font-size:  15px;
-	font-weight: 550;
-}
-
-.lds-ring {
-    display: inline-block;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 80px;
-    height: 80px;
-  }
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border: 8px solid #fff;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #fff transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
