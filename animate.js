@@ -56,14 +56,16 @@ window.onload = () => {
       })
     }
 
-    homeButton.addEventListener('click', h => {
-      h.preventDefault();
-      let target = h.target.href;
+    if (homeButton != null) {
+      homeButton.addEventListener('click', h => {
+        h.preventDefault();
+        let target = h.target.href;
 
-      tran.classList.add('is-active');
+        tran.classList.add('is-active');
 
-      setTimeout(() => {
-        window.location.href = target;
-      }, 400);
-    })
+        setTimeout(() => {
+          window.location.href = target;
+        }, 400);
+      })
+    }
   }
