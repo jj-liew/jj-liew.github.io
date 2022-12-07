@@ -20,7 +20,7 @@ body {
 
 ul {
     list-style-type: none;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
     width:  20.1em;
     text-align: center;
@@ -95,7 +95,7 @@ a:hover {
 }
 
 #about {
-    margin: auto;
+    margin: 0 auto;
     width: 70em;
 }
 
@@ -110,72 +110,41 @@ a:hover {
 }
 
 h1 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: -0.5em;
-    padding: 0.3em;
-    width: 20em;
-    font-size: 46px;
+    font-size: 35px;
     font-weight: bold;
-    text-align: left;
-}
-
-h2 {
-    margin: auto;
     text-align: center;
-    margin-top: -1.5em;
-    color: rgba(255, 255, 255, 0.83);
-    animation-name: animateArrow;
-    animation-timing-function: ease-out;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
-
-@keyframes animateArrow {
-    0% { transform: translateY(5px); }
-    100% { transform: translateY(-5px); }
-  }
 
 #content {
-    overflow: hidden;
-    margin: auto;
-    width: 44em;
-    margin-bottom: 2em;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5em;
+    margin: 0 auto;
+    width: 800px;
+    margin-top: 4em;
     padding: 2.5em;
-    border-radius: 10px;
 }
 
 #contact {
-    float: left;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 25em;
+    margin: 0 auto;   
 }
 
 #pic {
-    display: block;
-    margin-left: auto;
-    margin-right: 4.5em; 
+    margin: 0 auto;
     width: 10em;
     height: 10em;
-    max-width: 100%;
-    max-height: 100%;
     border-radius: 50%;
     background-image: url("profilePic.jpg");
     background-size: contain;
-    transition: all 0.5s;
 } 
 
-#pic:hover {
-    cursor: pointer;
-}
-
-#pic:active {
-    background-image: url("portfolioPic.jpg");
-    transition: all 0.5s;
-}
-
 p {
+    margin: 0 auto;
     overflow: hidden;
-    text-align: left;
+    text-align: justify;
     line-height: 2em; 
 }
 
@@ -253,11 +222,9 @@ p {
 
 .fa {
     font-size: 20px;
-    padding: 0.5em;
-    text-align: center;
     text-decoration: none;
-    margin: 0.5em 0.3em;
     border-radius: 5px;
+    padding: 25px;
 }
 
 .fa:active, #resume:active, li:active, #works:active {
@@ -282,12 +249,8 @@ p {
 
 #resume {
     display: block;
-    margin-left: 0.3em;
-    margin-right: auto;
-    margin-top: 1em;
-    max-width: 100%;
-    max-height: 100%;
-    width: 65%;
+    margin: 0 auto;
+    width: 190px;
     height: 40px;
     background-color: #5596BA;
     color: rgba(255, 255, 255, 0.83);
@@ -298,6 +261,10 @@ p {
 
 #resume:hover {
     background-color: #366b88;
+}
+
+#contactIcon {
+    text-align: center;
 }
 
 /* width */
@@ -329,7 +296,20 @@ p {
     color: #BAA14C;
 }
 
-#something {
-    font-size: 25px;
-}
+@media only screen and (max-width: 800px) {
+    #content 
+    {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 0em;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 4em;
+        padding: 2.5em;
+    }
 
+    p 
+    {
+        text-align: center;
+    }
+  }
