@@ -112,26 +112,30 @@ h1 {
 #menu {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    row-gap: 5em;
-    margin-top: 4em;
+    row-gap: 1.5em;
+    margin-top: 1em;
     text-align: center;
 }
 
 .card {
     position: relative;
     margin: auto;
-    width: 15em;
+    width: 95%;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     border-radius: 8px;
     transition: background-color 0.5s;
 }
 
 .card a {
-    padding: 6em 1em;
+    padding: 13em 1em;
 }
 
 .card a:hover {
     color: rgba(255, 255, 255, 0.83);
+}
+
+#DIGM {
+    background-color: #DE99AD;
 }
 
 #game {
@@ -144,6 +148,16 @@ h1 {
 
 #type {
     background-color: #569480;
+}
+
+#motion {
+    background-color: #91704E;
+}
+
+#DIGM:hover {
+    cursor: pointer;
+    background-color: #886e75;
+    transition: background-color 0.5s;
 }
 
 #game:hover {
@@ -161,6 +175,13 @@ h1 {
 #type:hover {
     cursor: pointer;
     background-color: #37534a;
+    transition: background-color 0.5s;
+}
+
+
+#motion:hover {
+    cursor: pointer;
+    background-color: #584634;
     transition: background-color 0.5s;
 }
 
@@ -190,6 +211,22 @@ h1 {
 }
 
 .fa-cube {
+    pointer-events: none;
+    position: absolute;
+    top: 0.1%;
+    left: 0.1%;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.fa-film {
+    pointer-events: none;
+    position: absolute;
+    top: 0.1%;
+    left: 0.1%;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.fa-desktop {
     pointer-events: none;
     position: absolute;
     top: 0.1%;

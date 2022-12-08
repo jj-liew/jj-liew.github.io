@@ -14,8 +14,11 @@ body {
     padding-top: 2.0em;
     padding-bottom: 1em;
     background-color: #181818;
-    box-shadow: 0px 0px 7px black;
     z-index: 1;
+}
+
+.scrolling {
+    box-shadow: 0px 0px 5px black;
 }
 
 ul {
@@ -101,236 +104,55 @@ li:active, #typeMenu div:active, #back:active {
     transition: transform 0s;
 }
 
-#content {
-    margin: auto;
-    width: 60em;
+h3 {
+    color: #55917e;
+    text-align: center;
+}
+
+#projectDes {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 #project1 {
     display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 30px;
-    float: right;
-    margin-top: 9em;
-    margin-right: 7em;
-}
-
-#project1 img {
-    width: 25em;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    row-gap: 3em;
+    margin-bottom: 10em;
+    justify-content: center;
 }
 
 #project2 {
-    display: none;
-    grid-template-columns: auto;
-    float: right;
-    margin-top: 9em;
-    margin-right: 10em;
-}
-
-#project2 img {
-    width: 45em;
-}
-
-#project3 {
-    display: none;
-    grid-template-columns: auto auto;
-    float: right;
-    column-gap: 30px;
-    margin-top: 9em;
-    margin-right: 7em;
-}
-
-#project3 img {
-    width: 25em;
-}
-
-#project4 {
-    display: none;
-    grid-template-columns: auto;
-    float: right;
-    margin-top: 9em;
-    margin-right: 10em;
-}
-
-#project4 img {
-    width: 45em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    row-gap: 3em;
+    margin-bottom: 10em;
+    justify-content: center;
 }
 
 #project5 {
-    display: none;
-    grid-template-columns: auto;
-    float: right;
-    margin-top: 9em;
-    margin-right: 10em;
-}
-
-#project5 img {
-    width: 45em;
-}
-
-.images {
-    float: right;
-    margin-right: -17.85em;
-    margin-top: 3.5em;
-    margin-bottom: -0.5em;
-    padding-bottom: 1.5em;
-    width: 110%;
-    background-image: linear-gradient(to right bottom, #569480, #569480, #569480, #4582ab, 
-    #6677a9, #826fa1, #986792, #a6617e, #ae636a, #ad6a58, #a4744b, #947f47);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+    gap: 2em;
+    row-gap: 3em;
+    margin-bottom: 10em;
 }
 
 .images img {
     border-radius: 3px;
     box-shadow: 0px 3px 5px black;
+    width: 30em;
+    max-width: 30em;
+    justify-self: center;
 }
 
 h1 {
-    float: left;
-    position: fixed;
-    padding: 0.3em;
-    margin-top: 4em;
-    margin-left: -10.5em;
-    width: 15em;
+    margin: 0 auto;
+    margin-top: 3.5em;
+    margin-bottom: 2.5em;
     font-weight: bold;
-    font-size: 40px;
-    text-align: right;
-    color: #569480;
-}
-
-#description {
-    float: left;
-    position: fixed;
-    z-index: 0;
-    top: 16em;
-    left: 6.4em;
-    padding: 1.5em;
-    padding-left: 3em;
-    padding-right: 3em;
-    width: 25em;
-    text-align: left;
-    background-color: #252525;
-    box-shadow: 0px 0px 10px black;
-    border-right: 40px solid #569480;
-    border-radius: 10px;
-}
-
-#typeMenu {
-    position: fixed;
-    top: 6em;
-    right: 3em;
-    width: 60em;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    column-gap: 10px;
-    background-color: rgba(51, 51, 51, 0.9);
-    border-radius: 5px;
-}
-
-#typeMenu div {
-    padding: 1em;
-    background-color: transparent;
-    border-radius: 5px;
     text-align: center;
-    border: none;
-}
-
-#typeMenu a {
-    font-weight: bold;
-}
-
-#typeMenu a:hover {
-    color: #569480;
-}
-
-#typeMenu #comp a {
-    color: #569480;
-}
-
-#subtitle {
-    font-weight: bold;
-    margin-left: -1.3em;
-}
-
-img {
-    display: block;
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 30em;
-    border-radius: 3px;
-}
-
-#back {
-    position: fixed;
-    display: block;
-    background-color: transparent;
-    color: #569480;
-    border: 1px solid #569480;
-    border-radius: 5px;
-    bottom: 3em;
-    left: 3em;
-    width: 150px;
-    text-align: center;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-    background: -webkit-linear-gradient(0deg, transparent 50%, #569480 50%);
-    background-size: 300px 80px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-#back::before {
-	color: rgba(255, 255, 255, 0.83);
-	content: '< ';
-	opacity: 0;
-    margin-left: -15px;
-	transition: all 0.1s;
-}
-
-#back:hover, #back:focus {
-	color: rgba(255, 255, 255, 0.83);
-	text-decoration: none;
-    padding-right: 3px;
-	background-position: 150px 0px;
-    outline:none;
-    cursor: pointer;
-}    
-
-#back:hover::before, #back:focus::before {
-	color: rgba(255, 255, 255, 0.83);
-  	opacity: 1;
-  	margin-left: -10px;
-}
-
-footer {
-    margin: auto;
-    margin-bottom: 0.35em;
-    width: 10em;
-}
-
-.fa {
-    font-size: 20px;
-    padding: 0.5em;
-    text-align: center;
-    text-decoration: none;
-    margin: 0.5em 0.3em;
-    border-radius: 5px;
-}
-
-.fa-linkedin, .fa-linkedin:hover{
-    background: transparent;
-    color: #007bb5;
-}
-
-.fa-github, .fa-github:hover {
-    background: transparent;
-    color: #8730a3;
-}
-
-.fa-envelope, .fa-envelope:hover {
-    background: transparent;
-    color: #BA785F;
+    color: #55917e;
 }
 
 /* width */
@@ -352,4 +174,125 @@ footer {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+@media only screen and (min-width: 1900px) {
+    #project1 {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+    
+    #project2 {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+
+    #project5 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+        gap: 2em;
+        row-gap: 3em;
+        margin-bottom: 10em;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #project5 {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2em;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #project1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+
+    #project1 img {
+        width: 28em;
+    }
+    
+    #project2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+    #project2 img {
+        width: 28em;
+    }
+
+    #project5 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 2em;
+        row-gap: 3em;
+        margin-bottom: 10em;
+    }
+}
+
+
+@media only screen and (max-width: 1300px) {
+    #project1 {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+    
+    #project2 {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+        #project5 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 1em;
+        row-gap: 3em;
+        margin-bottom: 10em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #project5 {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 1em;
+        row-gap: 3em;
+        margin-bottom: 10em;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .images img {
+        border-radius: 3px;
+        box-shadow: 0px 3px 5px black;
+        width: 18.5em;
+        max-width: 18.5em;
+        justify-self: center;
+    }
 }

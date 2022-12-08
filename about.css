@@ -147,7 +147,7 @@ h1 {
 p {
     margin: 0 auto;
     overflow: hidden;
-    text-align: justify;
+    text-align: left;
     line-height: 2em; 
 }
 

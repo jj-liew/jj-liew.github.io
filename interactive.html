@@ -10,10 +10,12 @@
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.3.2/math.js></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="interactive.css">
     <link rel="stylesheet" href="animation.css">
-    <script src="animate.js"></script>
+    <script src="cis487.js"></script>
+    <script src="cube.js"></script>
     <title>JJLIEW | Interactive 3D Graphics</title>
 </head>
 
@@ -38,34 +40,16 @@
             </li>
         </ul>
     </div>
-    <div id="content" class = "transition transition-1 is-active">
-        <h1>INTERACTIVE
-            <br>
-            3D GRAPHICS
-        </h1>
-        <p id="description">
-            Created graphics using WebGL, a JavaScript API for rendering graphics. Transformations are applied using matrices.
-        </p>
-        <div id="project">
-            <div id ="tictactoe" class="card">
-                <div class="card-body">
-                    <p id="subtitle">Rubik's Cube</p>
-                    <video loop autoplay muted>
-                        <source src="rubik.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                </div>
-            </div>
-        </div>
+    <h1>INTERACTIVE 3D GRAPHICS
+    </h1>
+    <p id="description">
+        Created with WebGL, a JavaScript API for rendering graphics. <br> Transformations are applied using matrices.
+    </p>
     
-    <footer>
-        <a href="https://www.linkedin.com/in/jjliew/" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"></a>
-        <a href="https://github.com/jj-liew" target="_blank" rel="noopener noreferrer" class="fa fa-github"></a>
-        <a href="mailto:kl1369@messiah.edu" class="fa fa-envelope"></a>
-    </footer>
-    <div class="buttons">
-    <a id="back" href="works.html" alt="Go to work page">Back</a>
-    </div>
-</div>
+    <canvas id="canvas" width="480" height="360">
+    </canvas>
+    <p id="helper">
+        <i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Drag any side of the Rubik's cube to rotate
+    </p>
 </body>
 </html>

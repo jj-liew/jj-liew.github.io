@@ -107,6 +107,7 @@ li:active, #project button:active, #top:active, #back:active, .fa:active {
 h1 {
     margin: 0 auto;
     margin-top: 3.5em;
+    font-weight: bold;
     width: 50%;
     text-align: center;
     color: #baa14c;
@@ -122,8 +123,9 @@ h1 {
 #projectList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));   
-    margin: 0 auto; 
-    width: 85%;
+    margin: 0 auto;
+    margin-top: -6em; 
+    width: 70%;
 }
 
 #project {
@@ -131,7 +133,7 @@ h1 {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
     margin-top: 10em;
     margin-bottom: 4em;
     padding: 0em 0em;;
