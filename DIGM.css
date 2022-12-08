@@ -64,7 +64,7 @@ li {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: none;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -154,7 +154,7 @@ h1 {
     margin-bottom: 2em;
     width: 80%;
     max-width: 60em;
-    text-align: center;
+    text-align: justify;
 }
 
 #teamPic {

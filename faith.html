@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="faith.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="playVideo.js"></script>
+    <title>JJLIEW | DIGM</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+               <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <a id="pageActive" href="works.html">WORKS</i></a>
+                    <div class="dropdown-content">
+                        <a href="game.html">Intro To Game Design</a>
+                        <a href="interactive.html">Interactive 3D Graphics</a>
+                        <a href="type.html">Typography</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="content">
+        <h1>Faith Integration Project
+        </h1>
+        <div class="images">
+            <div id="playButton" ><i id="playIcon" onclick="playPause()" class="fa fa-play-circle" aria-hidden="true"></i></div>
+            <p id="description">
+                <span id="subtitle">Triptych</span><br><br>
+                As a Christian, I wanted to show people that we can express our faith in many different ways. 
+                The project reflects my identity as a programmer/artist specifically in the field of web design and 3D art, 
+                and I wanted to use this identity to express my faith creatively. 
+                In this project, the opening door means that after you finally open up to God, you’re no longer lost and He is the place for you to go to whatever situations you’re facing. 
+                You can rest without worrying and leave the rest to Him fully. </p>
+            <video id="video" muted>
+                <source src="faith.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>     
+        </div>
+    </div>
+</body>
+</html>

@@ -60,7 +60,7 @@ li {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: none;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -154,6 +154,10 @@ h1 {
     background-color: #91704E;
 }
 
+#faith {
+    background-color: #f04949a4;
+}
+
 #DIGM:hover {
     cursor: pointer;
     background-color: #886e75;
@@ -182,6 +186,12 @@ h1 {
 #motion:hover {
     cursor: pointer;
     background-color: #584634;
+    transition: background-color 0.5s;
+}
+
+#faith:hover {
+    cursor: pointer;
+    background-color: #864444a4;
     transition: background-color 0.5s;
 }
 

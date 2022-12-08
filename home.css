@@ -73,7 +73,7 @@ li {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: none;
     opacity: 1;
     transition: opacity 0.5s;
 }
