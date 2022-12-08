@@ -87,11 +87,11 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #f04949a4;
+    color: #5596BA;
 }
 
 #pageActive {
-	color: #f04949a4;
+	color: #5596BA  ;
 	font-weight: 600;
     border-radius: 5px;
 }
