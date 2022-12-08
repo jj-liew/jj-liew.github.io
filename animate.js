@@ -7,7 +7,9 @@ window.onload = () => {
     const homeButton = document.querySelector(".about");
     const tran = document.querySelector('.transition');
     window.scrollTo(0, 0);
-  
+    
+    const navbar = document.querySelector(".nav");
+
     setTimeout(() => {
       tran.classList.remove('is-active');
     }, 400);
@@ -68,4 +70,18 @@ window.onload = () => {
         }, 400);
       })
     }
+
+    window.onscroll = function () { 
+
+      if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50 ) {
+          navbar.classList.add('scrolling');
+      } 
+      else {
+        navbar.classList.remove('scrolling');
+      }
+    };
   }
+
+  
+  
+ 
